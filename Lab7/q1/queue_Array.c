@@ -29,6 +29,7 @@ int main() {
   Enqueue(14);
 
   Dequeue();
+  Peek();
   Display();
 }
 
@@ -53,6 +54,13 @@ void Dequeue() {
      front++, (front > rear ? (front = rear = -1) : 0));
   else
     printf("\nQUEUE UNDERFLOW");
+}
+void Peek() {
+  if (isEmpty() == 1) {
+    printf("\nQUEUE UNDERFLOW");
+  } else {
+    printf("\nFirst Element of the Queue is : %d", queue[front]);
+  }
 }
 
 void Display() {
